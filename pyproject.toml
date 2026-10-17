@@ -3,6 +3,8 @@ name = "decisions-reranker"
 version = "0.2.0"
 description = "A simple reranker for RAG systems, built on the OpenAI Decisions API. Requires an OpenAI API key."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "Malte Weber", email = "dev-weber@posteo.de" }
 ]
