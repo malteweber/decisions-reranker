@@ -1,0 +1,16 @@
+[project]
+name = "decisions-reranker"
+version = "0.2.0"
+description = "A simple package to use the decisions api from openai as a reranker for RAG systems."
+readme = "README.md"
+authors = [
+    { name = "Malte Weber", email = "dev-weber@posteo.de" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=3.28.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
