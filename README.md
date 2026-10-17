@@ -1,6 +1,27 @@
 ## decisions-reranker
 
-A simple package to use the decisions api from openai as a reranker for RAG systems.
+A simple reranker for RAG systems, built on top of the OpenAI Decisions API.
+
+OpenAI doesn't offer a dedicated reranking model, so this package uses the Decisions API to fill that gap. If your stack already runs on OpenAI, you can add reranking without bringing in another provider.
+
+### requirements
+
+This package calls the OpenAI API and requires an OpenAI API key. By default it creates an `OpenAI()` client, which reads the key from the `OPENAI_API_KEY` environment variable:
+
+```bash
+export OPENAI_API_KEY="sk-..."
+```
+
+Alternatively, pass your own configured client:
+
+```python
+from openai import OpenAI
+from decisions_reranker import DecisionsReranker
+
+reranker = DecisionsReranker(client=OpenAI(api_key="sk-..."))
+```
+
+Each `filter()` or `rerank()` call makes one request to the Decisions API and is billed to your OpenAI account.
 
 ### methods
 

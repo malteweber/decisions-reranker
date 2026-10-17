@@ -1,7 +1,7 @@
 [project]
 name = "decisions-reranker"
 version = "0.2.0"
-description = "A simple package to use the decisions api from openai as a reranker for RAG systems."
+description = "A simple reranker for RAG systems, built on the OpenAI Decisions API. Requires an OpenAI API key."
 readme = "README.md"
 authors = [
     { name = "Malte Weber", email = "dev-weber@posteo.de" }
